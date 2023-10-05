@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!--title--------------------------------->
+    <title>Thomas Marconi's Website</title>
+
+    <!--stylesheet-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/article.css') }}"/>
+
+    <!--tab-icon-->
+    <link rel="icon" href="images/skate.jpg"/>
+
+    <!--poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  </head>
+  <body>
+	<!--Nav-Section-->
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<div class="icon-wrapper">
+				<i class="fas fa-bars"></i>
+			</div>
+		</label>
+		<label class="logo"><a href="/">Marconi's Blog</a></label>
+		<ul>
+			<li><a href="https://www.marconi.bio">Home</a></li>
+			<li><a href="https://www.marconi.bio/about">About Me</a></li>
+			<li><a href="https://www.canva.com/design/DAFfthfnKnc/UE-Zu8Gda_j-y57EDO0Now/view?utm_content=DAFfthfnKnc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Resume</a></li>
+			<li><a href="https://github.com/thomasmarconi">GitHub</a></li>
+			<li><a href="https://www.linkedin.com/in/thomasmarconi">LinkedIn</a></li>
+			<li><a class="active" href="https://www.marconi.bio/info">Website Info</a></li>
+		</ul>
+	</nav>
+
+	<article>
+		<div class="blog-heading">
+			<h3>Website Info</h3>
+		</div>
+		<figure>
+                        <img class="size-4" src="/images/coffee.jpg"></img>
+                </figure>
+		<h2>Full Story</h2>
+		<p>
+I created this website for my network administration class using a bunch of amazing technologies. Using a Digital Ocean droplet running NGINX I am able to serve html webpages to you, the user of my website! The backend of the website uses a Python script which implements the Flask library to route user web requests. This is all being serviced by Gunicorn, which keeps the flask app running at all times so that the website stays up and running.
+		</p>
+		<p>
+		In order to increase the security of marconi.bio I made sure to configure SSL certificates. To do this, I made use of CertBot, an automated tool for obtaining and managing SSL/TLS certificates. Furthermore, I configured the NGINX configuration file to include a number of security headers. I also had to configure NGINX to serve static elements like images, media, and css files.
+		</p>
+		<p>
+		As far as front end development of the website goes I used a combination of html and css to style the website to my liking. This is really my first time working with css and I am really glad with how it turned out. If you're an avid user of the desktop application Discord you'll notice I took inspiration from their color scheme.
+		</p>
+		<p>
+		The purpose of this website is to chronicle my journey into cybersecurity. I plan on writing blog posts from week to week to show others my passion. I'm excited to continue work on this in the coming weeks and months!
+		</p>
+
+		<p>
+		Thanks for reading and I hope you have a great day! - Thomas Marconi
+		</p>
+	</article>
+  	</body>
+</html>

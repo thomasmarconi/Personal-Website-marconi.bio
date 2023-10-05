@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!--title--------------------------------->
+    <title>Thomas Marconi's Website</title>
+
+    <!--stylesheet-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/article.css') }}"/>
+
+    <!--tab-icon-->
+    <link rel="icon" href="images/skate.jpg"/>
+
+    <!--poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  </head>
+  <body>
+	<!--Nav-Section-->
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<div class="icon-wrapper">
+				<i class="fas fa-bars"></i>
+			</div>
+		</label>
+		<label class="logo"><a href="/">Marconi's Blog</a></label>
+		<ul>
+			<li><a href="https://www.marconi.bio">Home</a></li>
+			<li><a href="https://www.marconi.bio/about">About Me</a></li>
+			<li><a href="https://www.canva.com/design/DAFfthfnKnc/UE-Zu8Gda_j-y57EDO0Now/view?utm_content=DAFfthfnKnc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Resume</a></li>
+			<li><a href="https://github.com/thomasmarconi">GitHub</a></li>
+			<li><a href="https://www.linkedin.com/in/thomasmarconi">LinkedIn</a></li>
+			<li><a href="https://www.marconi.bio/info">Website Info</a></li>
+		</ul>
+	</nav>
+
+	<article>
+		<div class="blog-heading">
+			<h3>Working With My First Client!</h3>
+			<h2>18 August 2023</h2>
+			<a href="https://www.infinityhealth.us"><h2>www.infinityhealth.us</h2></a>
+		</div>
+		<figure>
+			<img class="size-4" src="/images/codeWallpaper.jpg"></img> 
+		</figure>
+		<h2>TLDR</h2>
+		<p>I worked with my first client to redesign his <a href="https://www.infinityhealth.us">website</a>. I found it to be a wonderful learning experience and I would love to do it again. Please read below to see my journey.
+		</p>
+		<h2>Full Story</h2>
+		<p>I was surprised when I was offered the opportunity to redesign a local chiropractor’s 
+		<a href="https://www.infinityhealth.us">website</a>
+		who I was connected with through my girlfriend. He knew I recently graduated with a degree in computer science and thought it would be a good opportunity for someone with web development experience to work on his much outdated website. See below for some images of the original home page.
+		</p>
+		<h3>Before</h3>
+		<figure>
+			<img class="size-6" src="/images/moleski-before-1.png">
+			<img class="size-6" src="/images/moleski-before-2.png">
+		</figure>
+		<p>I mentioned my surprise because at first it felt like a daunting task. To take on a job with a client who had a vision for what he wanted his website to look like was a real responsibility and one that I didn’t want to take lightly. As I began considering the job I remembered some important principles my software engineering teacher, Prof. Chris Mills, taught us for when you are interacting with a customer. Always ask detailed questions about what the client specifically wants and write those things down so that you can have them to refer to when you’re designing and also when the client inevitably changes their mind on what they actually want. He had a good sense of humor. I also went in with the mentality that the customer is always right. Whatever he envisioned, even if I thought it might not be the best design choice, I would try my best to bring it to life. 
+		</p> 
+		<p>Once I accepted the job my first task was learning what types of technologies the website was hosted on. I was expecting a programming language such as html, javascript, or css but to my surprise his website was hosted on Wix. I found this to be very easy to learn. For those reading without any background in coding experience, Wix is a drag and drop website builder that uses pre-built templates with customisation options. For someone tech savvy this was a walk in the park but I understand why my client, who is very knowledgeable in his studied field but has a difficult time understanding computers, would want to outsource the job to someone else. It was within a few days that I had a good grasp of Wix’s built-in editor when I went into the office to discuss specifics.
+		</p>
+		<p>
+		My client wanted his website to be streamlined and cleaned up. This meant having consistent fonts and color schemes across the website, reducing the amount of redundant web pages, and adding a more minimalist theme with less background noise and images and texts that really popped. He also wanted to make sure that all of the images on his website were copyright free.
+		</p>
+		<p>
+		I first redesigned the home page to suit what he wanted and he loved it. Other than some small details like image choice and text placement he really loved the template that I had brought to life for him. I then began working on cleaning up the rest of the webpages. This was a very tedious task as most of his web pages had lots of text information that needed reformatting into the proper color scheme. As I worked on that I also did my best to simplify the navigation bar and footer for each of the webpages and I am really happy with how that turned out. After I completed reformatting some of the pages, the navigation bar, and the footer I sent the doctor another draft of what I completed to make sure I was on the right track with what he wanted and he was excited about the progress I was making.</p>
+		<p>
+		As I continued working I ran into a roadblock. One thing that I was stumped on at first was creating a system that allowed for visitors to the website to enter their email and receive an email containing a pdf. I initially tried using Wix’s built in email campaigns but that didn’t fit my need as I only needed to send the visitors email when they requested it. I then tried outsourcing the task with a third party app like mail chimp but a lot of those services have a subscription fee and I wanted to find a way to accomplish the task without creating more cost for the customer. I continued to search within Wix’s features and found something called automations which didn’t at first seem to be set up for what I wanted. I did some research on them and found that I could automate an email response whenever a particular form is completed and so I gave it a shot. I created the email offer forms and three separate automations with their own emails to send and it worked. I was really happy to tell the doctor I got the email feature working and he was equally enthused by it.</p>
+		<p>
+		After I had completed reformatting all of the pages I sent the doctor and his staff a near completed version of the website and they were very pleased with my work. They had some things they wanted differently though. I went into the office and we discussed finishing touches and within a week I had them taken care of and the website was finished. </p>
+		<h3>After</h3>
+		<figure>
+			<img class="size-6" src="/images/moleski-after-1.png">
+			<img class="size-6" src="/images/moleski-after-2.png">
+		</figure>
+		<p>
+		It occurred to me at this point that we had only briefly spoken about compensation for the job. Provisionally, I said I would get back to him at some point with my hourly rate and the hours I worked on the project. It was somewhat difficult to bring up the question of compensation in our initial design meetings and looking back I wish it was something I communicated more effectively on for my sake and the sake of the customer. I refrained from giving a quote early on because I didn’t know what my work was worth. I never worked designing websites much less did I know what the going hourly rate was for an entry level web developer. I contacted one of my friends who did web dev work and asked his thoughts on the matter. He informed me that at his job they would charge around $25/hour for their work. I figured that since this was my first job and I knew the client personally I would charge somewhat less than that. 
+		</p>
+		<p>
+		As I sent the final email saying the website was live with an included invoice for the work I felt accomplished. I thought I learned a lot from interacting with a customer and hearing their vision for their website. It was very rewarding seeing their reactions as I would show them revised versions of my work and it was humbling to hear when they didn’t like certain design choices and I would have to rework things. Overall, I think I gained an invaluable experience and I would love to do it again. 
+		</p>
+		<p>
+		Thanks for reading and I hope you have a great day! - Thomas Marconi
+		</p>
+	</article>
+  	</body>
+</html>
