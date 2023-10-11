@@ -67,6 +67,15 @@
     height: 280px;
     cursor: pointer;
   }
+
+#WebDev{
+    height: 400px;
+}
+
+#FullStack{
+    height: 330px;
+}
+
 .servicesIcon {
     font-size: 36px;
     text-align: center;
