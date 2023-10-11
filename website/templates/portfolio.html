@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Thomas Marconi's Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
-  <!-- linking css file -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}">
-  <!--tab-icon-->
-  <link rel="icon" href="images/skate.jpg"/>
+    <title>Thomas Marconi's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <!-- linking css file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/portfolio.css') }}"> 
+    <link rel="stylesheet" href="../static/css/portfolio.css"> <!-- for local env -->
+    <!--tab-icon-->
+    <link rel="icon" href="../images/skate.jpg"/>
+
+    <!-- load javascript after loading all html content -->
+    <script defer src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+    <script defer  src="../static/js/portfolio.js"></script> <!-- for local env -->
 </head>
 
-<body>
+<body style="background-color:#dfeaf3;">
     <!-- navbar -->
     <!-- https://getbootstrap.com/docs/5.2/components/navbar/ -->
     <!-- Add class of bg-light to nav element -->
@@ -34,10 +39,10 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -59,57 +64,97 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero_text">
                 <h2 class="hero_title">Hi, welcome to my portfolio.</h2>
                 <p class="hero_desc">I am a New Grad Software Engineer currently living in Washington, DC.</p>
-        	<div class="social-icons mt-4">
+        	    <div class="social-icons mt-4">
             		<a href="https://www.linkedin.com/in/thomasmarconi" target="_blank"><i class="fab fa-linkedin fa-xl"></i></a>
-            		<a href="https://www.github.com/thomasmarconi" target="_blank"><i class="fab fa-github fa-xl"></i></a>
+            		<a href="https://www.github.com/thomasmarconi" target="_blank"><i class="fab fa-github fa-xl"></i></a><br>
+                    <a class="btn btn-outline-light btn-lg" href="https://docs.google.com/document/d/e/2PACX-1vRi2MpjVIlBphmgXHSlwQIBJNVfSA2l49mCiIKg0vKrLyD_YT54T-fFPue-6GRAEdivxk2-Oy0Y9SWj/pub" role="button"><strong>View Resume</strong></a>
+                </div>
         	</div>
-		<div class="d-grid gap-2 col-2 mx-auto">
-			<a class="btn btn-outline-light btn-lg" href="https://docs.google.com/document/d/e/2PACX-1vRi2MpjVIlBphmgXHSlwQIBJNVfSA2l49mCiIKg0vKrLyD_YT54T-fFPue-6GRAEdivxk2-Oy0Y9SWj/pub" role="button"><strong>View Resume</strong></a>
-            	</div>
-            </div>
         </div>
     </section>
     
     <!-- about section -->
-    <section class="container mt-4 pt-4 section" id="about">
-        <h1 class="text-center">About Me</h1>
+    <section class="container mt-4 pt-4 section fade-in" id="about">
+        <h1 class="text-center bold">⚡ About Me ⚡</h1>
+        <h3 style="color:steelblue;" class="text-center bold">Innovative.Dependable.Compassionate.</h3>
         
-        <div class="row mt-4">
-            <div class="col-lg-6">
-                <img src="images/Headshot.jpg" class="image_about" alt="">
+        <div class="row mt-4 justify-content-center flex-nowrap">
+            <div class="col-lg-5">
+                <img src="../images/Headshot.jpg" class="image_about" alt="">
             </div>
 
-            <div class="col-lg-6">
-                <p>Hello, welcome to my website! My name is Thomas Marconi. I’m honored you would take a moment to read about me and my life. I am a recent graduate of Florida State University with a B.S. in Computer Science who has a passion for sofware development, cybersecurity, and self-improvement. I’m a self-starter with a lot of grit and determination and a strong love for God and country.
+            <div class="col-lg-4">
+                <p>
+                    Hello, welcome to my website! My name is Thomas Marconi. I’m honored you would take a moment to read about me and my life. I am a recent graduate of Florida State University with a B.S. in Computer Science who has a passion for sofware development, cybersecurity, and self-improvement. I’m a self-starter with a lot of grit and determination and a strong love for God and country.
                 </p>
                 <div class="row mt-3">
                     <div class="col-md-6">
-			<h2>Interests</h2>
-                            Basketball<br>
-                            Skateboarding<br>
-			    Anime/Manga<br>
+                        <h2 class="bold">Interests</h2>
+                        Basketball<br>
+                        Skateboarding<br>
+                        Anime/Manga<br>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <p>
-		    
+            
                     </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Education Section -->
+    <section class="section fade-in" id="education">
+        <h1 class="text-center bold">🚀 Education 🚀</h1>
+        <div class="row mt-4 justify-content-center flex-nowrap">
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-graduation-cap"></i>
+                        <h4 class="card-title mt-3 bold">Florida State University</h4>
+                        <p class="card-text mt-3 text-center">
+                            <strong>Graduation Date</strong>: May 2023 <br>
+                            <strong>GPA</strong>: 3.714<br>
+                            <strong>President's List</strong>: Spring 2023<br>
+                            <strong>Dean's List</strong>: Fall 2020, 2021, & 2022 and Spring 2021 & 2022<br>
+                        </p>
+                    </div>
+                </div>  
+            </div>
+    
+            <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                        <i class="fas servicesIcon fa-paper-plane"></i>
+                        <h4 class="card-title mt-3 bold">Relevant Course Work</h4>
+                        <p class="card-text mt-3 text-center">
+                            Data Structures and Algoriths I & II <br>
+                            Object Oriented Programming <br>
+                            Database Theory, Software Engineering <br>
+                            Full Stack Development in C# <br>
+                            Advanced Python and Java Programming <br>
+                            Network Administration, Computer Architecture <br>
+                        </p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+
+    </section>
     
     <!-- portfolio section-->
     <section class="section" id="portfolio">
         <div class="container mt-3">
-            <h1 class="text-center">Portfolio</h1>
-            <div class="row">
+            <h1 class="text-center fade-in bold">🔥 Portfolio 🔥</h1>
+            <div class="row fade-in"> <!-- first row -->
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img class="card-img-top" src="images/portfolio.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="../images/portfolio.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Personal Website</h4>
-			    <p class="card-text">Utilized DigitalOcean cloud web service to obtain a droplet (machine) to host my website. Leveraged NGINX, GUnicorn, Python, and Flask to route web requests and maintain the back end. Employed use of HTML5 and CSS to style and design a mobile/desktop reactive website.</p>
+			                <p class="card-text">Utilized DigitalOcean cloud web service to obtain a droplet (machine) to host my website. Leveraged NGINX, GUnicorn, Python, and Flask to route web requests and maintain the back end. Employed use of HTML5 and CSS to style and design a mobile/desktop reactive website.</p>
                             <div class="text-center">
                                 <a href="https://github.com/thomasmarconi/Personal-Website-marconi.bio" class="btn btn-dark">Link</a>
                             </div>
@@ -119,9 +164,9 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img class="card-img-top" src="images/infinity-health.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="../images/infinity-health.png" alt="Card image" style="width:100%">
                         <div class="card-body">
-				<h4 class="card-title">Free Lance Web Development: www.infinityhealth.us</h4>
+				            <h4 class="card-title">Free Lance Web Development: www.infinityhealth.us</h4>
                             <p class="card-text">Collaborated with clients to understand their project’s specific needs and desires.Maintained effective communication with client liaisons throughout the development process.</p>
                             <div class="text-center">
                                 <a href="https://www.infinityhealth.us" class="btn btn-dark">Link</a>
@@ -132,7 +177,7 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img class="card-img-top" src="images/BnB.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="../images/BnB.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">Bounty and Blades Unity Video Game(C#)</h4>
                             <p class="card-text">Delegated a team of 4 students to develop a RTS Video Game on the Unity Platform. Reviewed appropriate project documentations to submit as proposals and progress checks. Collaborated effectively through use of GitHub.</p>
@@ -144,10 +189,10 @@
                 </div>
             </div>
             <br>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
+            <div class="row fade-in"> <!-- second row -->
+                <div class="col-lg-4 mt-4 ">
                     <div class="card">
-                        <img class="card-img-top" src="images/hmnews.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="../images/hmnews.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">News Website: hmnews.xyz</h4>
                             <p class="card-text">Developed a news website using Python, Jinja, NGINX, Flask, and HTML. Utilized Auth0 and SQL to create a database for users and their liked and disliked articles. Invoked the “hackernews” API to retrieve news stories and used Python library JSON to parse the results.</p>
@@ -160,10 +205,10 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img class="card-img-top" src="images/eCommerce.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="../images/eCommerce.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">UWP Full Stack E-Commerce App(C#)</h4>
-			    <p class="card-text">Developed a Universal Windows Platform (UWP) thick client desktop app with a database using the .NET framework and JSON library on Visual Studio Community. Used Microsoft’s markup language Extensible Application Markup Language (XAML) to style the front end.</p>
+			                <p class="card-text">Developed a Universal Windows Platform (UWP) thick client desktop app with a database using the .NET framework and JSON library on Visual Studio Community. Used Microsoft’s markup language Extensible Application Markup Language (XAML) to style the front end.</p>
                             <div class="text-center">
                                 <a href="https://github.com/thomasmarconi/eCommerce--Marconi" class="btn btn-dark">Link</a>
                             </div>
@@ -173,10 +218,10 @@
 
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img class="card-img-top" src="images/MyInt.png" alt="Card image" style="width:100%">
+                        <img class="card-img-top" src="../images/MyInt.png" alt="Card image" style="width:100%">
                         <div class="card-body">
                             <h4 class="card-title">MyInt Data Structure Project</h4>
-			    <p class="card-text"> This C++ program uses a dynamic array of integers to represent a data type for massive numbers. You can use this to perform basic arithmetic with large numbers.</p>
+			                <p class="card-text"> This C++ program uses a dynamic array of integers to represent a data type for massive numbers. You can use this to perform basic arithmetic with large numbers.</p>
                             <div class="text-center">
                                 <a href="https://github.com/thomasmarconi/MyInt" class="btn btn-dark">Link</a>
                             </div>
@@ -189,8 +234,8 @@
 
     <!-- services section-->
     <!-- https://getbootstrap.com/docs/5.2/components/card/#about -->
-    <section class="container section" id="services">
-        <h1 class="text-center">Services</h1>
+    <section class="container section fade-in" id="services">
+        <h1 class="text-center bold">👨‍💻 Services 👨‍💻</h1>
         <div class="row">
             <div class="col-lg-4 mt-4">
                 <div class="card servicesText">
@@ -198,7 +243,7 @@
                         <i class="fas servicesIcon fa-clock"></i>
                         <h4 class="card-title mt-3">Website Development</h4>
                         <p class="card-text mt-3">
-			Designed user-friendly websites that increase usability and web traffic by 100%.
+			            Designed user-friendly websites that increase usability and web traffic by 100%.
                         </p>
                     </div>
                 </div>  
@@ -207,7 +252,7 @@
                 <div class="card servicesText">
                     <div class="card-body">
                         <i class='fas servicesIcon fa-layer-group'></i>
-                        <h4 class="card-title mt-3">Backend Development</h4>
+                        <h4 class="card-title mt-3">Full Stack Development</h4>
                         <p class="card-text mt-3">
                         </p>
                     </div>
@@ -226,7 +271,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-4 mt-4">
                 <div class="card servicesText">
                     <div class="card-body">
@@ -259,16 +304,16 @@
                     </div>
                 </div>  
             </div>
-        </div>
+        </div> -->
     </section>
 
     
     <!-- contact section-->
     <!-- https://getbootstrap.com/docs/5.2/forms/overview -->
-    <section class="container mt-3 section" id="contact">
-        <h1 class="text-center">Contact Me</h1>
+    <section class="container mt-3 section fade-in " id="contact">
+        <h1 class="text-center bold">🤙 Contact Me 🤙</h1>
 
-        <div class="row mt-4">
+        <div class="row mt-4 justify-content-center flex-nowrap">
 
             <div class="col-lg-6">
                 <!-- form fields -->
@@ -282,9 +327,7 @@
                 </form>
                 <button type="button" class="btn btn-success mt-3">Contact Me</button>
             </div>
-	    <div class="col-lg-6">
-		    <a class="btn btn-dark btn-lg" href="https://docs.google.com/document/d/e/2PACX-1vRi2MpjVIlBphmgXHSlwQIBJNVfSA2l49mCiIKg0vKrLyD_YT54T-fFPue-6GRAEdivxk2-Oy0Y9SWj/pub" role="button">Resume</a>
-	    </div>
+
         </div>
         
     </section>
@@ -299,8 +342,6 @@
     </footer>
     
 
-    <!-- load javascript after loading all html content -->
-    <script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
 
 </body>
 

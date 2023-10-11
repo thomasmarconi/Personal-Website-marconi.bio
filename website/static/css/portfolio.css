@@ -36,7 +36,11 @@
 .image_about {
     width: 95%;
     height:auto;
-    border-radius: 16px;
+    border-radius: 30px;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .navbarDark {
@@ -68,18 +72,38 @@
     text-align: center;
     width: 100%;
 }
+
 .card-title {
     text-align: center;
 }
 .card:hover .servicesIcon {
-    color: #008000;
+    color: steelblue;
 }
 .servicesText:hover {
-    border: 1px solid #008000;
+    border: 1px solid steelblue;
 }
 
 .footer {
     background-color: #808080;
     text-align: center;
+}
+
+.fade-in{
+    opacity: 0;
+    transition: all 2.5s;
+    filter: blur(1px);
+    transform: translateX(-100%);
+}
+
+.fade-in.appear{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
 }
 

@@ -1,4 +1,6 @@
-const header = document.querySelector(".navbar")
+const header = document.querySelector(".navbar");
+
+const faders = document.querySelectorAll('.fade-in');
 
 window.onscroll = function() {
     var top = window.scrollY;
@@ -9,3 +11,16 @@ window.onscroll = function() {
         header.classList.remove('navbarDark');
     }
 }
+
+const appearOnScroll = new IntersectionObserver(function(entries) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting){
+            entry.target.classList.add('appear');
+        }
+        else{
+            entry.target.classList.remove('appear');
+        }
+    })
+});
+
+faders.forEach((el) => appearOnScroll.observe(el)); 
