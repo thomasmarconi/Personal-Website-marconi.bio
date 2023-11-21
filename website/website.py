@@ -4,9 +4,6 @@ app = Flask(__name__, static_url_path='/static', static_folder='static')
 @app.route("/")
 def portfolio():
     return render_template("portfolio.html")
-@app.route("/aboutme")
-def aboutme():
-    return render_template("aboutme.html")
 @app.route("/info")
 def info():
     return render_template("info.html")
