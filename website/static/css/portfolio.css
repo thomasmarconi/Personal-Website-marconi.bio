@@ -10,7 +10,7 @@
 /* hero background image */
 .bgimage {
     height:100vh;
-    background: url('../../images/space.jpg');
+    background: url('../../images/space.webp');
     background-size:cover;
     position:relative;
     padding: 0;
